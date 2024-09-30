@@ -1,6 +1,6 @@
 import { Disclosure, DisclosureButton, DisclosurePanel, Menu, MenuButton, MenuItem, MenuItems } from '@headlessui/react'
 import { Bars3Icon, BellIcon, XMarkIcon } from '@heroicons/react/24/outline'
-
+import Header from "../components/Header";
 const user = {
   name: 'Tom Cook',
   email: 'tom@example.com',
@@ -27,17 +27,12 @@ function classNames(...classes) {
 export default function Dashboard() {
   return (
     <>
+    <Header />
       <div className="min-h-full z-1">
-        <Disclosure as="nav" className="bg-[#9D628C]">
+        <Disclosure as="nav" className="bg-[#629D73]">
           <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
             <div className="flex h-16 items-center justify-between">
               <div className="flex items-center">
-                <div className="flex-shrink-0">
-                  <img
-                    alt="Your Company"
-                    className="h-8 w-8"
-                  />
-                </div>
                 <div className="hidden md:block">
                   <div className="ml-10 flex items-baseline space-x-4">
                     {navigation.map((item) => (
@@ -46,7 +41,7 @@ export default function Dashboard() {
                         href={item.href}
                         aria-current={item.current ? 'page' : undefined}
                         className={classNames(
-                          item.current ? 'bg-[#629D73] text-white' : 'text-white hover:bg-[#629D73] hover:text-white',
+                          item.current ? 'bg-[#4DB2B0] text-white' : 'text-white hover:bg-[#4DB2B0] hover:text-white',
                           'rounded-md px-3 py-2 text-sm font-medium',
                         )}
                       >
@@ -60,7 +55,7 @@ export default function Dashboard() {
                 <div className="ml-4 flex items-center md:ml-6">
                   <button
                     type="button"
-                    className="relative rounded-full bg-[#9D628C] p-1 text-white hover:text-white focus:outline-none focus:ring-2 focus:ring-white focus:ring-offset-2 focus:ring-offset-[#9D628C]"
+                    className="relative rounded-full bg-[#4DB2B0] p-1 text-white hover:text-white focus:outline-none focus:ring-2 focus:ring-white focus:ring-offset-2 focus:ring-offset-[#9D628C]"
                   >
                     <span className="absolute -inset-1.5" />
                     <span className="sr-only">View notifications</span>
@@ -157,11 +152,7 @@ export default function Dashboard() {
           </DisclosurePanel>
         </Disclosure>
 
-        <header className="bg-[#629D73] shadow">
-          <div className="mx-auto max-w-7xl px-4 py-6 sm:px-6 lg:px-8">
-            <h1 className="text-3xl font-bold tracking-tight text-white">Dashboard</h1>
-          </div>
-        </header>
+        
         <main>
           <div className="mx-auto max-w-7xl px-4 py-6 sm:px-6 lg:px-8">{/* Your content */}</div>
         </main>
