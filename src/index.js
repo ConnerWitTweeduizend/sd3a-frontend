@@ -3,6 +3,7 @@ import { BrowserRouter, Routes, Route, Navigate } from "react-router-dom";
 import Home from './views/Home';
 import Dashboard from "./views/Dashboard";
 import Login from "./views/Login";
+import Logout from './view/Logout';
 import Register from "./views/Register";
 import './index.css'
 import  { Redirect } from 'react-router-dom'
