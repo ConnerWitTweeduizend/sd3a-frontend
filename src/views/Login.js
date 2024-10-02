@@ -13,12 +13,14 @@ export default function Login() {
 const handleSubmit = async (e) => {
   e.preventDefault();
 
+  
   try {
     const response = await axios.post('http://api.chrisouboter.com/api/auth/login', {
       email,
       password
     });
 
+    
     const data = response.data;
     console.log(data);
 
